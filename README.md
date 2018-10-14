@@ -1,7 +1,6 @@
 # Tutoriel React Native avec C++ pour Android
 
 Tutoriel pour création d'une application React Native utilisant du code C++ avec Android.
-Ce tutoriel est basé sur [Kyle Banks Tutorial](https://kylewbanks.com/blog/react-native-tutorial-part-1-hello-react)
 
 ## Prérequis
 ### Windows
@@ -181,6 +180,12 @@ Il se peut que votre application ne compile pas, cela pourrait être du au fait 
 Si vous avez encore des problèmes, c'est que ce tutoriel doit être mis à jour et que vous devrez faire des recherches sur [Google](https://www.google.ca/) et [Stack Overflow](https://stackoverflow.com/) pour plus d'aide.
 ## Utiliser du code C++
 À suivre ...
+## Source et information supplémentaire
+- [Kyle Bank ReactCalculator Tutorial](https://kylewbanks.com/blog/react-native-tutorial-part-1-hello-react)
+- [Kyle Bank ReactCalculator GitHub](https://github.com/KyleBanks/ReactCalculator)
+- [React Native Getting Started Documentation](https://facebook.github.io/react-native/docs/getting-started)
+- [React Native Native Modules Android Documentation](https://facebook.github.io/react-native/docs/native-modules-android)
+- [Kerberos Morphy RN-Calculator](https://github.com/KerberosMorphy/RN-Calculator)
 ## License
 ```
 MIT License
