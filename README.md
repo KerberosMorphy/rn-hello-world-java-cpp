@@ -98,6 +98,9 @@ Revenez dans le répertoire de votre application Hello World et exécuter les co
 $ npm install my-library --save
 $ react-native link my-library
 ```
+**NOTE IMPORTANTE**
+Chaque fois que vous modifiez le code de votre librairie, vous devrez absolument refaire l'étape précédante et vous aurez ensuite à redémarrer votre application tel que vu à l'étape **Créer votre application**.
+
 Maintenant à l'emplacement suivant dans votre librarie :
 
 `my-library/android/src/main/java/com/reactlibrary/`
@@ -174,10 +177,6 @@ export default class HelloWorldApp extends Component {
 }
 ```
 Vous venez de créer votre première application utilisant des fonctionnalités Java!
-### Note Importante ###
-Il se peut que votre application ne compile pas, cela pourrait être du au fait qu'Android a changé certaine de leur commande, allez voir le fichier **README** de votre librairie, le point numéro 3 conernant Android. Ouvrez le fichier dont il est fait mention et modifier le mot ***compile*** par le mot ***implementation***. 
-
-Si vous avez encore des problèmes, c'est que ce tutoriel doit être mis à jour et que vous devrez faire des recherches sur [Google](https://www.google.ca/) et [Stack Overflow](https://stackoverflow.com/) pour plus d'aide.
 ## Utiliser du code C++
 À suivre ...
 ## Source et information supplémentaire
