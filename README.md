@@ -186,7 +186,7 @@ Si vous avez encore des problèmes, c'est que ce tutoriel doit être mis à jour
 - [React Native Getting Started Documentation](https://facebook.github.io/react-native/docs/getting-started)
 - [React Native Native Modules Android Documentation](https://facebook.github.io/react-native/docs/native-modules-android)
 - [Kerberos Morphy RN-Calculator](https://github.com/KerberosMorphy/RN-Calculator)
-## License
+## Licence
 ```
 MIT License
 
