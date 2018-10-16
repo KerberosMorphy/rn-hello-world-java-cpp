@@ -179,12 +179,14 @@ export default class HelloWorldApp extends Component {
 Vous venez de créer votre première application utilisant des fonctionnalités Java!
 ## Utiliser du code C++
 À suivre ...
-## Source et information supplémentaire
+## Bibliographie
 - [Kyle Bank ReactCalculator Tutorial](https://kylewbanks.com/blog/react-native-tutorial-part-1-hello-react)
 - [Kyle Bank ReactCalculator GitHub](https://github.com/KyleBanks/ReactCalculator)
 - [React Native Getting Started Documentation](https://facebook.github.io/react-native/docs/getting-started)
 - [React Native Native Modules Android Documentation](https://facebook.github.io/react-native/docs/native-modules-android)
 - [Kerberos Morphy RN-Calculator](https://github.com/KerberosMorphy/RN-Calculator)
+- [React Native with JNI & C](https://thebhwgroup.com/blog/react-native-jni)
+- [Interaction of Kotlin with C++](https://proandroiddev.com/android-ndk-interaction-of-kotlin-and-c-c-5e19e35bac74)
 ## Licence
 ```
 MIT License
