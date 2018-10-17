@@ -98,7 +98,7 @@ Revenez dans le répertoire de votre application Hello World et exécuter les co
 $ npm install my-library --save
 $ react-native link react-native-my-library
 ```
-Notez l'ajout du ''''react-native-'''' devant le nom de votre librairie. 
+Notez l'ajout du ````react-native-```` devant le nom de votre librairie. 
 ### *NOTE IMPORTANTE* ###
 _Chaque fois que vous modifiez le code de votre librairie, vous devrez absolument refaire l'étape précédante et vous aurez ensuite à redémarrer votre application tel que vu à l'étape **Créer votre application**._
 
