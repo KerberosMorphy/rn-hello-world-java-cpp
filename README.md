@@ -36,11 +36,14 @@ Tutoriel pour création d'une application React Native utilisant du code C++ ave
     - Vous pouvez aussi utiliser [OpenJDK](http://openjdk.java.net/install/) comme alternative à JDK : 
 - Installer [Android Studio](https://developer.android.com/studio/)
     - Suivre ces [indications](https://facebook.github.io/react-native/docs/getting-started#1-install-android-studio) pour les paramètres : 
-### Linux
+### Linux (Testé sur Kubuntu 18.10)
 - Installer [Node.js](https://nodejs.org/en/download/package-manager/) selon la version de votre distribution Linux : 
+    ```shell
+    $ apt install npm
+    ```
 - Installer React Native depuis la commande : 
     ```shell
-    npm install -g react-native-cli
+    $ npm install -g react-native-cli
     ```
 - Installer [Java Developper Kit 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) ou plus récent : 
     - Vous pouvez aussi utiliser [OpenJDK](http://openjdk.java.net/install/) comme alternative à JDK : 
@@ -58,6 +61,10 @@ $ react-native init HelloWorld
 Allez ensuitre dans le répertoire de votre programme :
 ```shell
 $ cd HelloWorld
+```
+Installer les packages automatiquement créé à l'étape précédente :
+```shell
+$ npm install
 ```
 Vous pouvez par la suite démarrer votre application pour Android :
 ```shell
