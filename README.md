@@ -36,9 +36,11 @@ Tutoriel pour création d'une application React Native utilisant du code C++ ave
     - Vous pouvez aussi utiliser [OpenJDK](http://openjdk.java.net/install/) comme alternative à JDK : 
 - Installer [Android Studio](https://developer.android.com/studio/)
     - Suivre ces [indications](https://facebook.github.io/react-native/docs/getting-started#1-install-android-studio) pour les paramètres : 
-### Linux (Testé sur Kubuntu 18.10)
+### Linux
+*Testé sur kubuntu 18.10, tutoriel non terminé pour linux et non fonctionnel*
 - Installer [Node.js](https://nodejs.org/en/download/package-manager/) selon la version de votre distribution Linux : 
     ```shell
+    $ snap install nodejs --classic --channel=10/stable
     $ apt install npm
     ```
 - Installer React Native depuis la commande : 
@@ -46,9 +48,11 @@ Tutoriel pour création d'une application React Native utilisant du code C++ ave
     $ npm install -g react-native-cli
     ```
 - Installer [Java Developper Kit 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) ou plus récent : 
-    - Vous pouvez aussi utiliser [OpenJDK](http://openjdk.java.net/install/) comme alternative à JDK : 
+    - Vous pouvez aussi utiliser [OpenJDK](http://openjdk.java.net/install/) comme alternative à JDK.
 - Installer [Android Studio](https://developer.android.com/studio/)
-    - Suivre ces [indications](https://facebook.github.io/react-native/docs/getting-started#1-install-android-studio) pour les paramètres : 
+    - Suivre ces [indications](https://facebook.github.io/react-native/docs/getting-started#1-install-android-studio) pour les paramètres :
+    ```shell
+    $ snap install android-studio --classic
 - Suivre ces indications pour installer [Watchman](https://facebook.github.io/react-native/docs/getting-started#watchman)
 
 ## Créer votre application
@@ -61,10 +65,6 @@ $ react-native init HelloWorld
 Allez ensuitre dans le répertoire de votre programme :
 ```shell
 $ cd HelloWorld
-```
-Installer les packages automatiquement créé à l'étape précédente :
-```shell
-$ npm install
 ```
 Vous pouvez par la suite démarrer votre application pour Android :
 ```shell
@@ -143,7 +143,7 @@ Nous y ajouterons la méthode suivante :
 ```java
   @ReactMethod
   public void helloWorld(Callback callback) {
-    callback.invoke('Hello World!');
+    callback.invoke("Hello World!");
   }
 ```
 Notez bien que le **@ReactMethod** est essentiel pour toutes méthodes qui sera appelé depuis votre application.
@@ -187,6 +187,9 @@ export default class HelloWorldApp extends Component {
 Vous venez de créer votre première application utilisant des fonctionnalités Java!
 ## Utiliser du code C++
 À suivre ...
+## FAQ
+- Incapable de faire fonctionner l'application avec la librairy Java :
+    - 
 ## Bibliographie
 - [Kyle Bank ReactCalculator Tutorial](https://kylewbanks.com/blog/react-native-tutorial-part-1-hello-react)
 - [Kyle Bank ReactCalculator GitHub](https://github.com/KyleBanks/ReactCalculator)
