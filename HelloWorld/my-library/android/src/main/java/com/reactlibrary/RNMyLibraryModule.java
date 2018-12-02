@@ -8,13 +8,18 @@ import com.facebook.react.bridge.Promise;
 
 public class RNMyLibraryModule extends ReactContextBaseJavaModule {
 
-  private static final String E_HELLO_WORLD_ERROR = "E_HELLO_WORLD_ERROR";
+  private HelloWorld cppApi;
 
   private final ReactApplicationContext reactContext;
+
+  static {
+    System.loadLibrary("helloworld");
+  }
 
   public RNMyLibraryModule(ReactApplicationContext reactContext) {
     super(reactContext);
     this.reactContext = reactContext;
+    cppApi = HelloWorld.create();
   }
 
   @Override
@@ -24,6 +29,7 @@ public class RNMyLibraryModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void helloWorld(Promise promise) {
-      promise.resolve("Hello World!");
+    String myString = cppApi.getHelloWorld();
+    promise.resolve(myString);
   }
 }

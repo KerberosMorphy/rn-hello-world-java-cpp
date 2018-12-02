@@ -1,0 +1,3 @@
+C:/assistyv/rn-hello-world-java-cpp/HelloWorld/node_modules/react-native-my-library/android/.externalNativeBuild/cmake/debug/arm64-v8a/CMakeFiles/helloworld.dir
+C:/assistyv/rn-hello-world-java-cpp/HelloWorld/node_modules/react-native-my-library/android/.externalNativeBuild/cmake/debug/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/assistyv/rn-hello-world-java-cpp/HelloWorld/node_modules/react-native-my-library/android/.externalNativeBuild/cmake/debug/arm64-v8a/CMakeFiles/rebuild_cache.dir

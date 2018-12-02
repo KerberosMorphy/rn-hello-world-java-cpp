@@ -20,6 +20,26 @@ android {
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
+        externalNativeBuild {
+            cmake {
+                cppFlags "-std=c++11 -frtti -fexceptions"
+            }
+        }
+    }
+    sourceSets {
+        main {
+            java {
+                srcDirs = [
+                        "../generated-src/java",
+                        "src/main/java"
+                ]
+            }
+        }
+    }
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
     }
     lintOptions {
         abortOnError false

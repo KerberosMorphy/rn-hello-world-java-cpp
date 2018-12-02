@@ -1,0 +1,8 @@
+# ninja log v5
+1	883	0	CMakeFiles/helloworld.dir/0eab84cb586dbb1d7ab1e9093ffa673f/react-native-my-library/src/cpp/hello_world_impl.cpp.o	23908ccc8e65a528
+18	1035	0	CMakeFiles/helloworld.dir/19378458b28e74710f1ed26afc6b525c/deps/djinni/support-lib/jni/djinni_main.cpp.o	288eb6c0a9b1aa5f
+14	1416	0	CMakeFiles/helloworld.dir/19378458b28e74710f1ed26afc6b525c/generated-src/jni/NativeHelloWorld.cpp.o	b35d963fd3cd39da
+9	2291	0	CMakeFiles/helloworld.dir/19378458b28e74710f1ed26afc6b525c/deps/djinni/support-lib/jni/djinni_support.cpp.o	2d8713314b53884c
+2292	2667	0	../../../../build/intermediates/cmake/debug/obj/x86/libhelloworld.so	78617a018b5788e2
+8	772	0	CMakeFiles/helloworld.dir/0eab84cb586dbb1d7ab1e9093ffa673f/react-native-my-library/src/cpp/hello_world_impl.cpp.o	23908ccc8e65a528
+772	1151	0	../../../../build/intermediates/cmake/debug/obj/x86/libhelloworld.so	78617a018b5788e2

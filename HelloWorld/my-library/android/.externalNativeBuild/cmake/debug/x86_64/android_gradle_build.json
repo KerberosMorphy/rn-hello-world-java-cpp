@@ -1,0 +1,59 @@
+
+{
+	"buildFiles" : 
+	[
+		"C:/assistyv/rn-hello-world-java-cpp/HelloWorld/node_modules/react-native-my-library/android/CMakeLists.txt"
+	],
+	"cleanCommands" : 
+	[
+		"C:\\Users\\T1000\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\assistyv\\rn-hello-world-java-cpp\\HelloWorld\\node_modules\\react-native-my-library\\android\\.externalNativeBuild\\cmake\\debug\\x86_64 --target clean"
+	],
+	"cppFileExtensions" : [ "cpp" ],
+	"libraries" : 
+	{
+		"helloworld-Debug-x86_64" : 
+		{
+			"abi" : "x86_64",
+			"artifactName" : "helloworld",
+			"buildCommand" : "C:\\Users\\T1000\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\assistyv\\rn-hello-world-java-cpp\\HelloWorld\\node_modules\\react-native-my-library\\android\\.externalNativeBuild\\cmake\\debug\\x86_64 --target helloworld",
+			"buildType" : "debug",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android21 --gcc-toolchain=C:/Users/T1000/AppData/Local/Android/Sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/T1000/AppData/Local/Android/Sdk/ndk-bundle/sysroot  -Dhelloworld_EXPORTS -I..\\..\\..\\..\\..\\deps\\djinni\\support-lib -I..\\..\\..\\..\\..\\deps\\djinni\\support-lib\\jni -I..\\..\\..\\..\\..\\generated-src\\cpp -I..\\..\\..\\..\\..\\generated-src\\jni -I..\\..\\..\\..\\..\\src\\cpp -isystem C:\\Users\\T1000\\AppData\\Local\\Android\\Sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++\\include -isystem C:\\Users\\T1000\\AppData\\Local\\Android\\Sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++abi\\include  -isystem C:/Users/T1000/AppData/Local/Android/Sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -std=c++11 -frtti -fexceptions -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "C:/assistyv/rn-hello-world-java-cpp/HelloWorld/node_modules/react-native-my-library/deps/djinni/support-lib/jni/djinni_main.cpp",
+					"workingDirectory" : "C:/assistyv/rn-hello-world-java-cpp/HelloWorld/node_modules/react-native-my-library/android/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android21 --gcc-toolchain=C:/Users/T1000/AppData/Local/Android/Sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/T1000/AppData/Local/Android/Sdk/ndk-bundle/sysroot  -Dhelloworld_EXPORTS -I..\\..\\..\\..\\..\\deps\\djinni\\support-lib -I..\\..\\..\\..\\..\\deps\\djinni\\support-lib\\jni -I..\\..\\..\\..\\..\\generated-src\\cpp -I..\\..\\..\\..\\..\\generated-src\\jni -I..\\..\\..\\..\\..\\src\\cpp -isystem C:\\Users\\T1000\\AppData\\Local\\Android\\Sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++\\include -isystem C:\\Users\\T1000\\AppData\\Local\\Android\\Sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++abi\\include  -isystem C:/Users/T1000/AppData/Local/Android/Sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -std=c++11 -frtti -fexceptions -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "C:/assistyv/rn-hello-world-java-cpp/HelloWorld/node_modules/react-native-my-library/deps/djinni/support-lib/jni/djinni_support.cpp",
+					"workingDirectory" : "C:/assistyv/rn-hello-world-java-cpp/HelloWorld/node_modules/react-native-my-library/android/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android21 --gcc-toolchain=C:/Users/T1000/AppData/Local/Android/Sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/T1000/AppData/Local/Android/Sdk/ndk-bundle/sysroot  -Dhelloworld_EXPORTS -I..\\..\\..\\..\\..\\deps\\djinni\\support-lib -I..\\..\\..\\..\\..\\deps\\djinni\\support-lib\\jni -I..\\..\\..\\..\\..\\generated-src\\cpp -I..\\..\\..\\..\\..\\generated-src\\jni -I..\\..\\..\\..\\..\\src\\cpp -isystem C:\\Users\\T1000\\AppData\\Local\\Android\\Sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++\\include -isystem C:\\Users\\T1000\\AppData\\Local\\Android\\Sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++abi\\include  -isystem C:/Users/T1000/AppData/Local/Android/Sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -std=c++11 -frtti -fexceptions -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "C:/assistyv/rn-hello-world-java-cpp/HelloWorld/node_modules/react-native-my-library/generated-src/jni/NativeHelloWorld.cpp",
+					"workingDirectory" : "C:/assistyv/rn-hello-world-java-cpp/HelloWorld/node_modules/react-native-my-library/android/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android21 --gcc-toolchain=C:/Users/T1000/AppData/Local/Android/Sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/T1000/AppData/Local/Android/Sdk/ndk-bundle/sysroot  -Dhelloworld_EXPORTS -I..\\..\\..\\..\\..\\deps\\djinni\\support-lib -I..\\..\\..\\..\\..\\deps\\djinni\\support-lib\\jni -I..\\..\\..\\..\\..\\generated-src\\cpp -I..\\..\\..\\..\\..\\generated-src\\jni -I..\\..\\..\\..\\..\\src\\cpp -isystem C:\\Users\\T1000\\AppData\\Local\\Android\\Sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++\\include -isystem C:\\Users\\T1000\\AppData\\Local\\Android\\Sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++abi\\include  -isystem C:/Users/T1000/AppData/Local/Android/Sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -std=c++11 -frtti -fexceptions -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "C:/assistyv/rn-hello-world-java-cpp/HelloWorld/node_modules/react-native-my-library/src/cpp/hello_world_impl.cpp",
+					"workingDirectory" : "C:/assistyv/rn-hello-world-java-cpp/HelloWorld/node_modules/react-native-my-library/android/.externalNativeBuild/cmake/debug/x86_64"
+				}
+			],
+			"output" : "C:/assistyv/rn-hello-world-java-cpp/HelloWorld/node_modules/react-native-my-library/android/build/intermediates/cmake/debug/obj/x86_64/libhelloworld.so",
+			"toolchain" : "1705639565"
+		}
+	},
+	"toolchains" : 
+	{
+		"1705639565" : 
+		{
+			"cCompilerExecutable" : "C:/Users/T1000/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe",
+			"cppCompilerExecutable" : "C:/Users/T1000/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe"
+		}
+	}
+}
