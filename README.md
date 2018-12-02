@@ -195,7 +195,7 @@ export default class HelloWorldApp extends Component {
          * retournera son résultat à votre fonction JS
          **/
         RNMyLibrary.helloWorld((result) => {
-            this.helloWorld(result)
+            this.helloWorldHandler(result)
         });
     }
     render() {
@@ -211,7 +211,7 @@ export default class HelloWorldApp extends Component {
      * La mise à jour du State est ce qui indique à votre application
      * de faire un refresh.
      **/
-    helloWorld(result) {
+    helloWorldHandler(result) {
         this.setState({ helloWorld: result });
     }
 }
@@ -303,6 +303,8 @@ export default class HelloWorldApp extends Component {
     }
 }
 ```
+
+En résumé : [Promise](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) permet de gérer les situations de concurrence, il peut être utilisé autant dans vos libraries Java que dans vos fonction JavaScript normal. Callback peut-être plus rapide et utilisé si rien ne dépend de son retour et/ou exécution.
 
 ## Utiliser du code C++
 À suivre ...
