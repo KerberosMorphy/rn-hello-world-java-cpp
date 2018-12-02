@@ -12,12 +12,9 @@ export default class HelloWorldApp extends Component {
         };
 
         /**
-         * Votre fonction java s'exécutera dans le constructeur et
-         * retournera son résultat à votre fonction JS
+         * Votre fonction JS s'exécutera dans le constructeur
          **/
-        RNMyLibrary.helloWorld((result) => {
-            this.helloWorld(result)
-        });
+        this.helloWorldHandler();
     }
     render() {
         return (
@@ -28,11 +25,16 @@ export default class HelloWorldApp extends Component {
     }
 
     /**
-     * Votre fonction JS mettra à jour le State de votre application
-     * La mise à jour du State est ce qui indique à votre application
-     * de faire un refresh.
+     * Votre fonction asynchrone JS appelera votre fonction JAVA et
+     * attendra le retour avant de mettre à jour le State
+     * pour ainsi activer le refresh.
      **/
-    helloWorld(result) {
-        this.setState({ helloWorld: result });
+    async helloWorldHandler() {
+        try {
+            let result = await RNMyLibrary.helloWorld();
+            this.setState({ helloWorld: result });
+        } catch (e) {
+            console.error(e)
+        }
     }
 }

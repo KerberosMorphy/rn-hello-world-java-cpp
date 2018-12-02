@@ -4,9 +4,11 @@ package com.reactlibrary;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
-import com.facebook.react.bridge.Callback;
+import com.facebook.react.bridge.Promise;
 
 public class RNMyLibraryModule extends ReactContextBaseJavaModule {
+
+  private static final String E_HELLO_WORLD_ERROR = "E_HELLO_WORLD_ERROR";
 
   private final ReactApplicationContext reactContext;
 
@@ -21,7 +23,7 @@ public class RNMyLibraryModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void helloWorld(Callback callback) {
-    callback.invoke("Hello World!");
+  public void helloWorld(Promise promise) {
+      promise.resolve("Hello World!");
   }
 }

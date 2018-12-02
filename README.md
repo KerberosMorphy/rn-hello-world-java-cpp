@@ -219,6 +219,91 @@ export default class HelloWorldApp extends Component {
 Vous venez de créer votre première application utilisant des fonctionnalités Java!
 
 _*Si votre application ne fonctionne pas, assurez-vous d'avoir bien réexécuté la commande ````npm install my-library```` dans la racine de votre application pour lui indiquer les mises à jour de votre module.*_
+
+## Amélioration de votre code Java
+
+Précédemment nous avons utilisé le ````Callback```` pour nous renvoyer notre ````Hello World!````, mais l'utilisation de ````Promise```` pourrait être préférable pour permettre l'utilisation de fonction asynchrone.
+
+Cas d'exemple, votre application devient complexe et vous voulez appeler une fonction Java en utilisant son retour pour modifier votre State et rafraichir votre page. Vous constater que votre application n'est pas raffraichis après l'appel de votre fonction, lorsque vous intéragissez avec un autre fonction par la suite et que votre application se rafraichit vous remarquez que votre retour de fonction Java apparaît soudainement. Ce problème peut être du à la mauvaise synchronisation de vos différentes section de code, c'est à dire que votre application se rafraichit alors que votre fonciton Java n'a pas terminé de traîter l'information.
+
+Sans allez plus en détails voici l'alternative de ````Callback````
+
+**RNMyLibraryModule.java** :
+```java
+package com.reactlibrary;
+
+import com.facebook.react.bridge.ReactApplicationContext;
+import com.facebook.react.bridge.ReactContextBaseJavaModule;
+import com.facebook.react.bridge.ReactMethod;
+import com.facebook.react.bridge.Promise;
+
+public class RNMyLibraryModule extends ReactContextBaseJavaModule {
+
+  private static final String E_HELLO_WORLD_ERROR = "E_HELLO_WORLD_ERROR";
+
+  private final ReactApplicationContext reactContext;
+
+  public RNMyLibraryModule(ReactApplicationContext reactContext) {
+    super(reactContext);
+    this.reactContext = reactContext;
+  }
+
+  @Override
+  public String getName() {
+    return "RNMyLibrary";
+  }
+
+  @ReactMethod
+  public void helloWorld(Promise promise) {
+      promise.resolve("Hello World!");
+  }
+}
+```
+
+**App.js** :
+```javascript
+import React, { Component } from 'react';
+import { Text, View } from 'react-native';
+import RNMyLibrary from './my-library';
+
+export default class HelloWorldApp extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            helloWorld: ''
+        };
+
+        /**
+         * Votre fonction JS s'exécutera dans le constructeur
+         **/
+        this.helloWorldHandler();
+    }
+    render() {
+        return (
+            <View>
+                <Text>{this.state.helloWorld}</Text>
+            </View>
+        );
+    }
+
+    /**
+     * Votre fonction asynchrone JS appelera votre fonction JAVA et
+     * attendra le retour avant de mettre à jour le State
+     * pour ainsi activer le refresh.
+     **/
+    async helloWorldHandler() {
+        try {
+            let result = await RNMyLibrary.helloWorld();
+            this.setState({ helloWorld: result });
+        } catch (e) {
+            console.error(e)
+        }
+    }
+}
+```
+
 ## Utiliser du code C++
 À suivre ...
 ## Bibliographie
