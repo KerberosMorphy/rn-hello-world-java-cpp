@@ -1,0 +1,3 @@
+[submodule "HelloWorld/my-library/deps/djinni"]
+	path = HelloWorld/my-library/deps/djinni
+	url = https://github.com/dropbox/djinni.git

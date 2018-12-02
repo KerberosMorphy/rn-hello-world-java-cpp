@@ -14,26 +14,26 @@ Windows 10 :
     - VSCode et/ou WebStorm
     - Android Studio
 
-La partie concernant le code C++ via DJINNY n'a pas pu être réussis sur Windows, mais à été fait sur MacOS et Linux pour ensuite être transféré dans Windows.
+La partie concernant le code C++ via DJINNI n'a pas pu être réussis sur Windows, mais à été fait sur MacOS et Linux pour ensuite être transféré dans Windows.
 ## Prérequis
 ### Windows
 - Installer [Chocolatey](https://chocolatey.org/)
 - Installer Node.js, Python2, Java Developper Kit 8 depuis la commande : 
     ```shell
-    $ choco install -y nodejs.install python2 jdk8
+    choco install -y nodejs.install python2 jdk8
     ```
     - Si besoin, bous pouvez upgrader vos versions déjà installer :
     ```shell
-    $ choco upgrade chocolatey
+    choco upgrade chocolatey
     ```
     ```shell
-    $ choco upgrade -y nodejs.install python2 jdk8
+    choco upgrade -y nodejs.install python2 jdk8
     ```
     - Vous pouvez aussi intaller une version du [JDK plus récent](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
     - Vous pouvez aussi utiliser [OpenJDK](http://openjdk.java.net/install/) comme alternative à JDK
 - Installer React Native depuis la commande : 
     ```shell
-    $ npm install -g react-native-cli
+    npm install -g react-native-cli
     ```
 - Installer [Android Studio](https://developer.android.com/studio/)
     - Suivre ces [indications](tps://facebook.github.io/react-native/docs/getting-started#2-install-the-android-sdk) pour les paramètres
@@ -41,16 +41,16 @@ La partie concernant le code C++ via DJINNY n'a pas pu être réussis sur Window
 - Installer [Homebrew](https://brew.sh/)
 - Installer Node.js et Watchman depuis les commandes : 
     ```shell
-    $ brew install node
-    $ brew install watchman
+    brew install node
+    brew install watchman
     ```
 - Installer React Native depuis la commande : 
     ```shell
-    $ npm install -g react-native-cli
+    npm install -g react-native-cli
     ```
     - Si vous voyez une erreur du type *Cannot find module 'npmlog'*, essayez d'installer npm directement par la commande : 
     ```shell
-    $ curl -0 -L https://npmjs.org/install.sh | sudo sh
+    curl -0 -L https://npmjs.org/install.sh | sudo sh
     ```
 - Installer [Java Developper Kit 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) ou plus récent : 
     - Vous pouvez aussi utiliser [OpenJDK](http://openjdk.java.net/install/) comme alternative à JDK : 
@@ -60,19 +60,19 @@ La partie concernant le code C++ via DJINNY n'a pas pu être réussis sur Window
 *Testé sur kubuntu 18.10, tutoriel non terminé pour linux et non fonctionnel*
 - Installer [Node.js](https://nodejs.org/en/download/package-manager/) selon la version de votre distribution Linux : 
     ```shell
-    $ snap install nodejs --classic --channel=10/stable
-    $ apt install npm
+    snap install nodejs --classic --channel=10/stable
+    apt install npm
     ```
 - Installer React Native depuis la commande : 
     ```shell
-    $ npm install -g react-native-cli
+    npm install -g react-native-cli
     ```
 - Installer [Java Developper Kit 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) ou plus récent : 
     - Vous pouvez aussi utiliser [OpenJDK](http://openjdk.java.net/install/) comme alternative à JDK.
 - Installer [Android Studio](https://developer.android.com/studio/)
     - Suivre ces [indications](https://facebook.github.io/react-native/docs/getting-started#1-install-android-studio) pour les paramètres :
     ```shell
-    $ snap install android-studio --classic
+    snap install android-studio --classic
 - Suivre ces indications pour installer [Watchman](https://facebook.github.io/react-native/docs/getting-started#watchman)
 
 ## Créer votre application
@@ -80,15 +80,15 @@ La partie concernant le code C++ via DJINNY n'a pas pu être réussis sur Window
 
 Pour créer l'application exécutez la commande suivante :
 ```shell
-$ react-native init HelloWorld
+react-native init HelloWorld
 ```
 Allez ensuitre dans le répertoire de votre programme :
 ```shell
-$ cd HelloWorld
+cd HelloWorld
 ```
 Vous pouvez par la suite démarrer votre application pour Android :
 ```shell
-$ react-native run-android
+react-native run-android
 ```
 *Vous devez au préalable avoir un appareil Android connecté ou un émulateur Android en marche*
 
@@ -111,19 +111,19 @@ Vous avez terminé avec votre première application.
 ## Utiliser du code Java
 Ici, nous créerons une librarie React Native pour utiliser du code Java, pour se faire nous aurons besoin d'installer l'utilitaire de React Native simplifiant la procédure.
 ```shell
-$ npm install -g react-native-create-library
+npm install -g react-native-create-library
 ```
 Bien qu'elle peut-être créé n'importe où, nous la créerons directement dans le répertoire de notre application HelloWorld.
 Nous débuterons donc par créer la librairie à l'aide de la commande suivante.
 ```shell
-$ react-native-create-library my-library
+react-native-create-library my-library
 ```
 Si vous allez dans le répertoire my-library que vous venez de créer, vous trouverez un fichier **README**, les instructions à l'intérieure peuvent-être utile mais il y a certaine erreur.
 
 Revenez dans le répertoire de votre application Hello World et exécuter les commandes suivantes :
 ```shell
-$ npm install my-library --save
-$ react-native link react-native-my-library
+npm install my-library --save
+react-native link react-native-my-library
 ```
 Notez l'ajout du ````react-native-```` devant le nom de votre librairie, cela est fait automatiquement. 
 
@@ -307,7 +307,87 @@ export default class HelloWorldApp extends Component {
 En résumé : [Promise](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) permet de gérer les situations de concurrence, il peut être utilisé autant dans vos libraries Java que dans vos fonction JavaScript normal. Callback peut-être plus rapide et utilisé si rien ne dépend de son retour et/ou exécution.
 
 ## Utiliser du code C++
-À suivre ...
+
+### Prérequis
+React Native ne support pas nécessairement les dernières versions des SDK et NDK, il est donc préférable de suivre les indications sur le [site officiel](https://facebook.github.io/react-native/docs/building-from-source#prerequisites) pour savoir qu'elle sont les prérequis. Les liens pour le téléchargement de la dernière version NDK supporté sont donnés sur le [même site](https://facebook.github.io/react-native/docs/building-from-source#download-links-for-android-ndk).
+
+Nous allons importer un sous module dans votre projet, plus particulièrement dans **my-library**, ouvrez un terminal dans la racine de votre librairie et ajoutez DJINNI :
+```shell
+git submodule add https://github.com/dropbox/djinni.git deps/djinni
+```
+Nous allons générer la majeur partie de notre code grace à Djinni, ce code pourrait être utilisé pour faire le pont entre C++ et Java (Android) et entre Objective-C et C++ (iOS).
+
+Créez le fichier suivant :
+
+**helloword.djinni**
+```djinni
+hello_world = interface +c {
+  static create(): hello_world;
+  get_hello_world(): string;
+}
+```
+La méthode ````create()```` retournera un instance de notre objet C++ avec les méthodes que nous aurons indiqué dans ce fichier. La fonction ````get_hello_world()```` retournera la _String_ ````Hello Worlds!````.
+
+Nous devons aussi créer le script qui s'occupera de générer notre code :
+
+**run_djinni.sh**
+```bash
+#! /usr/bin/env bash
+
+### Configuration
+
+# Localisation du fichier djinni
+djinni_file="helloworld.djinni"
+
+# Namespace C++ namespace pour src généré
+namespace="helloworld"
+
+# Préfix de class Objective-C pour src généré
+objc_prefix="HW"
+
+# Nom du package Java pour src généré, c'est le nom de package de notre module my-librairy
+java_package="com.reactlibrary"
+
+
+### Script
+
+# le dossier de base
+base_dir=$(cd "`dirname "0"`" && pwd)
+
+# le dossier java de base
+java_dir=$(echo $java_package | tr . /)
+
+# dossier de sortie pour src généré
+cpp_out="$base_dir/generated-src/cpp"
+objc_out="$base_dir/generated-src/objc"
+jni_out="$base_dir/generated-src/jni"
+java_out="$base_dir/generated-src/java/$java_dir"
+
+# effacer les dossiers src généré
+rm -rf $cpp_out
+rm -rf $jni_out
+rm -rf $objc_out
+rm -rf $java_out 
+
+# exécution des commande djinni
+deps/djinni/src/run \
+   --java-out $java_out \
+   --java-package $java_package \
+   --ident-java-field mFooBar \
+   --cpp-out $cpp_out \
+   --cpp-namespace $namespace \
+   --jni-out $jni_out \
+   --ident-jni-class NativeFooBar \
+   --ident-jni-file NativeFooBar \
+   --objc-out $objc_out \
+   --objc-type-prefix $objc_prefix \
+   --objcpp-out $objc_out \
+   --idl $djinni_file
+```
+
+
+
+
 ## Bibliographie
 - [Kyle Bank ReactCalculator Tutorial](https://kylewbanks.com/blog/react-native-tutorial-part-1-hello-react)
 - [Kyle Bank ReactCalculator GitHub](https://github.com/KyleBanks/ReactCalculator)
@@ -316,6 +396,7 @@ En résumé : [Promise](https://developer.mozilla.org/fr/docs/Web/JavaScript/Ref
 - [Kerberos Morphy RN-Calculator](https://github.com/KerberosMorphy/RN-Calculator)
 - [React Native with JNI & C](https://thebhwgroup.com/blog/react-native-jni)
 - [Interaction of Kotlin with C++](https://proandroiddev.com/android-ndk-interaction-of-kotlin-and-c-c-5e19e35bac74)
+- [Mobile C++ Tutorial](http://mobilecpptutorials.com/) Voir Hello World App Part [1](http://mobilecpptutorials.com/hello-world-app-part-1.html)-[2](http://mobilecpptutorials.com/hello-world-app-part-2.html)-[3](http://mobilecpptutorials.com/hello-world-app-part-3.html)
 ## Licence
 ```
 MIT License
