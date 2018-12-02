@@ -2,12 +2,32 @@
 
 Tutoriel pour création d'une application React Native utilisant du code C++ avec Android.
 
+## À propos de ce tutoriel
+Les technologies avançant très rapidemente et tous modules n'étant pas mis à jour aussi régulièrement, des incompatibilités peuvent se créer au fil du temps. Dans le dossier de l'application servant d'example vous trouverez le fichier package.json qui contient les versions utilisez lors de la réalisation de ce tutoriel, si vous modifier votre propre fichier package.json vous pourrez modifier les versions que vous utilisez et donc retrouver la compatibilité des modules que j'ai utilisé. Notez toute fois qu'utiliser d'ancienne version peut vous rendre plus à risque, les mise à jour serve souvent à supprimer des failles de sécurité.
+
+Ce tutoriel à été réaliser avec ces environnements suivants :
+
+Windows 10 :
+
+- Terminal de commande : PowerShell
+- IDE : 
+    - VSCode et/ou WebStorm
+    - Android Studio
+
+La partie concernant le code C++ via DJINNY n'a pas pu être réussis sur Windows, mais à été fait sur MacOS et Linux pour ensuite être transféré dans Windows.
 ## Prérequis
 ### Windows
 - Installer [Chocolatey](https://chocolatey.org/)
 - Installer Node.js, Python2, Java Developper Kit 8 depuis la commande : 
     ```shell
     $ choco install -y nodejs.install python2 jdk8
+    ```
+    - Si besoin, bous pouvez upgrader vos versions déjà installer :
+    ```shell
+    $ choco upgrade chocolatey
+    ```
+    ```shell
+    $ choco upgrade -y nodejs.install python2 jdk8
     ```
     - Vous pouvez aussi intaller une version du [JDK plus récent](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
     - Vous pouvez aussi utiliser [OpenJDK](http://openjdk.java.net/install/) comme alternative à JDK
@@ -56,7 +76,7 @@ Tutoriel pour création d'une application React Native utilisant du code C++ ave
 - Suivre ces indications pour installer [Watchman](https://facebook.github.io/react-native/docs/getting-started#watchman)
 
 ## Créer votre application
-*Toutes les commandes suivantes sont basées sur Windows, vous pourriez avoir à les adapter si vous utilisez MacOS ou Linux*
+*Toutes les commandes suivantes sont basées sur Windows et on été exécuté via PowerShell, vous pourriez avoir à les adapter si vous utilisez MacOS ou Linux*
 
 Pour créer l'application exécutez la commande suivante :
 ```shell
@@ -105,9 +125,14 @@ Revenez dans le répertoire de votre application Hello World et exécuter les co
 $ npm install my-library --save
 $ react-native link react-native-my-library
 ```
-Notez l'ajout du ````react-native-```` devant le nom de votre librairie. 
+Notez l'ajout du ````react-native-```` devant le nom de votre librairie, cela est fait automatiquement. 
+
 ### *NOTE IMPORTANTE* ###
 _Chaque fois que vous modifiez le code de votre librairie, vous devrez absolument refaire l'étape précédante et vous aurez ensuite à redémarrer votre application tel que vu à l'étape **Créer votre application**._
+
+_En cas d'erreur lors du ````react-native link```` exécutez la commande ````npm install```` dans la racine de votre programme et refaite la commande ````react-native link````._
+
+_Si après l'installation de votre library vous n'arrivez plus à exécuter, cela peut être du au fait que le module android de votre library créé par React Native Create Library n'est plus à jour et cela crée une incompatibilité. Pour réglé ce problème, ouvrez le dossier ````android```` se trouvant dans votre dossier ````my-library```` avec Android Studio répondez non à toutes les questions pour être sur de ne rien briser dans votre code. Une fois ouvert allez dans ````Build````->````Clean Project````. Puis éexécutez votre programme, tout devrait fonctionner._
 
 Maintenant à l'emplacement suivant dans votre librarie :
 
@@ -130,8 +155,6 @@ public class RNMyLibraryModule extends ReactContextBaseJavaModule {
     super(reactContext);
     this.reactContext = reactContext;
   }
-
-  private final int TEST = 42;
 
   @Override
   public String getName() {
@@ -165,31 +188,39 @@ export default class HelloWorldApp extends Component {
 
         this.state = {
             helloWorld: ''
-        }
+        };
 
+        /**
+         * Votre fonction java s'exécutera dans le constructeur et
+         * retournera son résultat à votre fonction JS
+         **/
         RNMyLibrary.helloWorld((result) => {
-            this.helloWorld()
-            });
+            this.helloWorld(result)
+        });
     }
     render() {
         return (
-        <View>
-            <Text>RNMyLibrary.helloWorld()</Text>
-        </View>
+            <View>
+                <Text>{this.state.helloWorld}</Text>
+            </View>
         );
     }
 
+    /**
+     * Votre fonction JS mettra à jour le State de votre application
+     * La mise à jour du State est ce qui indique à votre application
+     * de faire un refresh.
+     **/
     helloWorld(result) {
         this.setState({ helloWorld: result });
     }
 }
 ```
 Vous venez de créer votre première application utilisant des fonctionnalités Java!
+
+_*Si votre application ne fonctionne pas, assurez-vous d'avoir bien réexécuté la commande ````npm install my-library```` dans la racine de votre application pour lui indiquer les mises à jour de votre module.*_
 ## Utiliser du code C++
 À suivre ...
-## FAQ
-- Incapable de faire fonctionner l'application avec la librairy Java :
-    - 
 ## Bibliographie
 - [Kyle Bank ReactCalculator Tutorial](https://kylewbanks.com/blog/react-native-tutorial-part-1-hello-react)
 - [Kyle Bank ReactCalculator GitHub](https://github.com/KyleBanks/ReactCalculator)
